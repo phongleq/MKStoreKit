@@ -222,7 +222,7 @@ static MKSKConfig*      _configuration;
            @"MKStoreKitConfigs.plist"]];
 }
 
-- (void) restorePreviousTransactionsOnComplete:(void (^)(void)) completionBlock
+- (void) restorePreviousTransactionsOnComplete:(void (^)(SKPaymentQueue * queue)) completionBlock
                                        onError:(void (^)(NSError*)) errorBlock
 {
   self.onRestoreCompleted = completionBlock;
